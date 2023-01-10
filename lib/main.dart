@@ -44,16 +44,19 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('AppBar'),
       ),
-      body: Column(
-        children: [
-          Text('A random awesome idea:'),
-          BigCard(pair: pair),
-          ElevatedButton(
-              onPressed: () {
-                appState.getNext();
-              },
-              child: Text('Next'))
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('A random awesome idea:'),
+            BigCard(pair: pair),
+            ElevatedButton(
+                onPressed: () {
+                  appState.getNext();
+                },
+                child: Text('Next'))
+          ],
+        ),
       ),
     );
   }
